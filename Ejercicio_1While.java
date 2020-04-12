@@ -1,11 +1,10 @@
 package T4_Matrices;
 
-public class Ejercicio_1 {
+public class Ejercicio_1While {
 
 	public static void main(String[] args) {
-		
-		int matriz1[][] = {{0,1,2},{2,3,3}};
-		int matriz2[][] = {{0,1,2},{2,3,3}};
+		int matriz1[][] = {{1,1},{2,3}};
+		int matriz2[][] = {{0,1},{2,3}};
 		int comparaciones = 0; // Vamos a contar cuantas comparamos
 
 		System.out.println(matriz1.length + "x" + matriz1[0].length);
@@ -23,14 +22,18 @@ public class Ejercicio_1 {
 		}
 		else {	// Si tienen la misma dimensión, miramos valor a valor
 			boolean iguales = true; // confiamos en que sean iguales
-			for (int i=0; i<matriz1.length; i++) {
-				// recorremos cada fila
-				for(int j=0; j< matriz1[0].length; j++) {
+			
+			int i = 0;
+			while(iguales & i<matriz1.length) {
+				int j = 0;
+				while (iguales & j<matriz1[0].length) {
 					comparaciones++;
-					if (matriz1[i][j] != matriz2[i][j]) {
+					if(matriz1[i][j] != matriz2[i][j]) {
 						iguales = false;
 					}
+					j++;
 				}
+				i++;
 			}
 			
 			if (iguales) {
@@ -42,6 +45,8 @@ public class Ejercicio_1 {
 			System.out.println(comparaciones + " comparaciones");
 			
 		}
+
+
 	}
 
 }
