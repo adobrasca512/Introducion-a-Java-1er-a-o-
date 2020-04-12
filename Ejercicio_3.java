@@ -1,15 +1,15 @@
-package T4_Arrays;
+package T3_Variables_Constantes;
 
 public class Ejercicio_3 {
 
 	public static void main(String[] args) {
-		// Codificar programa que calcule la suma de los valores del array
-		int Array []=new int [4];
-		int sumador=0;
-		for(int i=0;i<=Array.length;i++) {
-			sumador=sumador+i;
-		}
-		System.out.println("El resultado de la suma es: "+sumador);
+		// Dado un valor decimal (radio), calcular e imprimir por consola
+ float Radio=1;
+ float PI=3.1416f;
+ float Circunferencia=PI*2*Radio;
+ double Area= (PI*(Math.pow(Radio, 2)));
+ System.out.println("El total del Area es: "+Area);
+ System.out.println("El total de la circunferencia es: "+Circunferencia);
 	}
 
 }
